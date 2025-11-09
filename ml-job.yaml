@@ -14,9 +14,9 @@ spec:
           mountPath: /data          
         resources:
           requests:
-            memory: "1Gi"
+            memory: "1G"
           limits:
-            memory: "2Gi" 
+            memory: "2G" 
       volumes:
       - name: model-storage         
         persistentVolumeClaim:
