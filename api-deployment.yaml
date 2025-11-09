@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filipesantos-api-deploy
+  namespace: filipesantos
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: filipesantos-api 
+  template:
+    metadata:
+      labels:
+        app: filipesantos-api 
+    spec:
+      containers:
+      - name: api-server
+        image: pirolaa/api-server:v2 
+        ports:
+        - containerPort: 50009 
+        volumeMounts:
+        - name: model-storage
+          mountPath: /data
+      volumes:
+      - name: model-storage
+        persistentVolumeClaim:
+          claimName: filipesantos-pvc
