@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: ml-generator
-        image: pirolaa/ml-generator:v3
+        image: pirolaa/ml-generator:v4
         volumeMounts:
         - name: model-storage       
           mountPath: /data          
