@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: filipesantos-pvc    
+  namespace: filipesantos 
+spec:
+  storageClassName: default-storage-class-filipesantos
+  accessModes:
+    - ReadWriteMany 
+  resources:
+    requests:
+      storage: 1Gi       
+  selector:
+    matchLabels:
+      namespace: filipesantos
