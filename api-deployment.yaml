@@ -4,7 +4,7 @@ metadata:
   name: filipesantos-api-deploy
   namespace: filipesantos
 spec:
-  replicas: 2 
+  replicas: 1 
   selector:
     matchLabels:
       app: filipesantos-api 
