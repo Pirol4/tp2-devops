@@ -1,14 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: filipesantos-ml-job   
+  name: filipesantos-ml-job-ds2   
   namespace: filipesantos  
 spec:
   template:
     spec:
       containers:
       - name: ml-generator
-        image: pirolaa/ml-generator:v8
+        image: pirolaa/ml-generator:v9
         volumeMounts:
         - name: model-storage       
           mountPath: /data           
