@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: api-server
-        image: pirolaa/api-server:v6 
+        image: pirolaa/api-server:v7
         ports:
         - containerPort: 50009 
         volumeMounts:
