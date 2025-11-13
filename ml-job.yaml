@@ -11,12 +11,7 @@ spec:
         image: pirolaa/ml-generator:v4
         volumeMounts:
         - name: model-storage       
-          mountPath: /data          
-        resources:
-          requests:
-            memory: "1G"
-          limits:
-            memory: "2G" 
+          mountPath: /data           
       volumes:
       - name: model-storage         
         persistentVolumeClaim:
